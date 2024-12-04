@@ -1,0 +1,265 @@
+<!-- @if(showAlert){ @switch (type) { @case ('success') {
+<div
+  class=" bg-green-50 rounded-lg flex items-center text-green-600 my-4 mx-auto shadow-lg relative p-4 max-w-sm overflow-hidden break-words h-auto"
+>
+  <div class="w-1 bg-green-600 absolute top-0 left-0 h-full rounded-l-lg"></div>
+  <div class="flex flex-1 justify-center items-center space-x-4">
+    <div class="flex-shrink-0">
+      <svg
+        class="w-[26px] h-[26px"
+        fill="currentColor"
+        aria-hidden="true"
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        fill="currentColor"
+        viewBox="0 0 24 24"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10S2 17.523 2 12Zm13.707-1.293a1 1 0 0 0-1.414-1.414L11 12.586l-1.793-1.793a1 1 0 0 0-1.414 1.414l2.5 2.5a1 1 0 0 0 1.414 0l4-4Z"
+          clip-rule="evenodd"
+        />
+      </svg>
+    </div>
+    <div class="flex-1 text-start">
+      <h3 class="text-green-800 font-semibold tracking-wide">
+        Correcto:
+        <a href="#" class="font-normal">Ealeasdasdas dem dsajdjsadas prueba </a>
+      </h3>
+    </div>
+  </div>
+  <button
+    class="text-green-600 hover:text-green-700 focus:outline-none flex-shrink-0 ml-2"
+    aria-label="Cerrar"
+    (click)="closeAlert()"
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      class="w-5 h-5"
+      viewBox="0 0 24 24"
+      fill="currentColor"
+    >
+      <path
+        d="M18 6L6 18M6 6l12 12"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+      />
+    </svg>
+  </button>
+</div>
+
+} @case ('error') {
+<div
+  class="bg-red-50 rounded-lg flex items-center text-red-600 my-4 mx-auto shadow-lg relative p-4 max-w-sm overflow-hidden break-words h-auto"
+>
+  <div class="w-1 bg-red-500 absolute top-0 left-0 h-full rounded-l-lg"></div>
+  <div class="flex flex-1 justify-center items-center space-x-4">
+    <div class="flex-shrink-0">
+      <svg
+        class="w-6 h-6"
+        aria-hidden="true"
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        fill="currentColor"
+        viewBox="0 0 24 24"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10S2 17.523 2 12Zm7.707-3.707a1 1 0 0 0-1.414 1.414L10.586 12l-2.293 2.293a1 1 0 1 0 1.414 1.414L12 13.414l2.293 2.293a1 1 0 0 0 1.414-1.414L13.414 12l2.293-2.293a1 1 0 0 0-1.414-1.414L12 10.586 9.707 8.293Z"
+          clip-rule="evenodd"
+        />
+      </svg>
+    </div>
+    <div class="flex-1 text-start">
+      <h3 class="text-red-800 font-semibold tracking-wide">
+        Error:
+        <a href="#" class="font-normal">Ealeasdasdas dem dsajdjsadas prueba </a>
+      </h3>
+    </div>
+  </div>
+  <button
+    class="text-red-500 hover:text-red-700 focus:outline-none flex-shrink-0 ml-2"
+    aria-label="Cerrar"
+    (click)="closeAlert()"
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      class="w-5 h-5"
+      viewBox="0 0 24 24"
+      fill="currentColor"
+    >
+      <path
+        d="M18 6L6 18M6 6l12 12"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+      />
+    </svg>
+  </button>
+</div>
+} @case ('warning') {
+<div
+  class="bg-yellow-50 rounded-lg flex items-center text-yellow-500 my-4 mx-auto shadow-lg relative p-4 max-w-sm overflow-hidden break-words h-auto"
+>
+  <div
+    class="w-1 bg-yellow-500 absolute top-0 left-0 h-full rounded-l-lg"
+  ></div>
+  <div class="flex flex-1 justify-center items-center space-x-4">
+    <div class="flex-shrink-0">
+      <svg
+        class="w-[26px] h-[26px] fill-current"
+        aria-hidden="true"
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        fill="currentColor"
+        viewBox="0 0 24 24"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10S2 17.523 2 12Zm11-4a1 1 0 1 0-2 0v5a1 1 0 1 0 2 0V8Zm-1 7a1 1 0 1 0 0 2h.01a1 1 0 1 0 0-2H12Z"
+          clip-rule="evenodd"
+        />
+      </svg>
+    </div>
+    <div class="flex-1 text-start">
+      <h3 class="text-yellow-700 font-semibold tracking-wide">
+        Alerta:
+        <a href="#" class="font-normal">Ealeasdasdas dem dsajdjsadas prueba </a>
+      </h3>
+    </div>
+  </div>
+  <button
+    class="text-yellow-600 hover:text-yellow-700 focus:outline-none flex-shrink-0 ml-2"
+    aria-label="Cerrar"
+    (click)="closeAlert()"
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      class="w-5 h-5"
+      viewBox="0 0 24 24"
+      fill="currentColor"
+    >
+      <path
+        d="M18 6L6 18M6 6l12 12"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+      />
+    </svg>
+  </button>
+</div>
+} @case ('info') {
+<div
+  class="bg-blue-50 rounded-lg flex items-center text-blue-600 my-4 mx-auto shadow-lg relative p-4 max-w-sm overflow-hidden break-words h-auto"
+>
+  <div class="w-1 bg-blue-800 absolute top-0 left-0 h-full rounded-l-lg"></div>
+
+  <div class="flex flex-1 justify-center items-center space-x-4">
+    <div class="flex-shrink-0">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="fill-current w-[26px] h-[26px]"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10S2 17.523 2 12Zm9.408-5.5a1 1 0 1 0 0 2h.01a1 1 0 1 0 0-2h-.01ZM10 10a1 1 0 1 0 0 2h1v3h-1a1 1 0 1 0 0 2h4a1 1 0 1 0 0-2h-1v-4a1 1 0 0 0-1-1h-2Z"
+          clip-rule="evenodd"
+        />
+      </svg>
+    </div>
+
+    <div class="flex-1 text-start">
+      <h3 class="text-blue-800 font-semibold tracking-wide">
+        Atencion:
+        <a href="#" class="font-normal">Ealeasdasdas dem dsajdjsadas prueba </a>
+      </h3>
+    </div>
+  </div>
+
+  <button
+    class="text-blue-500 hover:text-blue-600 focus:outline-none flex-shrink-0 ml-2"
+    aria-label="Cerrar"
+    (click)="closeAlert()"
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      class="w-5 h-5"
+      viewBox="0 0 24 24"
+      fill="currentColor"
+    >
+      <path
+        d="M18 6L6 18M6 6l12 12"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+      />
+    </svg>
+  </button>
+</div>
+} } } -->
+
+@if(isShowAlert){
+  <div
+  class="fixed top-5 ml-3.5 right-5 bg-opacity-95 z-[1000] shadow-lg rounded-lg p-4 max-w-sm flex items-center space-x-4"
+  [ngClass]="{
+    'bg-green-50 text-green-600 border-l-4 border-green-600': type === 'success',
+    'bg-red-50 text-red-600 border-l-4 border-red-500': type === 'error',
+    'bg-yellow-50 text-yellow-600 border-l-4 border-yellow-500':type === 'warning',
+    'bg-blue-50 text-blue-600 border-l-4 border-blue-500': type === 'info'
+  }"
+>
+  <div
+    class="w-1 absolute top-0 left-0 h-full rounded-l-lg"
+    [ngClass]="{
+      'bg-green-600': type === 'success',
+      'bg-red-600': type === 'error',
+      'bg-yellow-600': type === 'warning',
+      'bg-blue-600': type === 'info'
+    }"
+  ></div>
+
+  <!-- Icono dinámico -->
+  <div class="flex-shrink-0">
+    <svg *ngIf="type === 'success'" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+      <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm0 18.75a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5zm0-4h-1.5V6h3v8.75h-1.5z" />
+    </svg>
+    <svg *ngIf="type === 'error'" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+      <path fill-rule="evenodd" d="M2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10S2 17.523 2 12Zm7.707-3.707a1 1 0 0 0-1.414 1.414L10.586 12l-2.293 2.293a1 1 0 1 0 1.414 1.414L12 13.414l2.293 2.293a1 1 0 0 0 1.414-1.414L13.414 12l2.293-2.293a1 1 0 0 0-1.414-1.414L12 10.586 9.707 8.293Z" clip-rule="evenodd" />
+    </svg>
+    <svg *ngIf="type === 'warning'" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+      <path fill-rule="evenodd" d="M2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10S2 17.523 2 12Zm11-4a1 1 0 1 0-2 0v5a1 1 0 1 0 2 0V8Zm-1 7a1 1 0 1 0 0 2h.01a1 1 0 1 0 0-2H12Z" clip-rule="evenodd" />
+    </svg>
+    <svg *ngIf="type === 'info'" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+      <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm0 18.75a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5zm0-4h-1.5V6h3v8.75h-1.5z" />
+    </svg>
+  </div>
+
+  <!-- Contenido de la alerta -->
+  <div class="flex-1">
+    <h3 class="font-semibold">
+      {{ title}}: <span class="font-normal">{{ message }}</span>
+    </h3>
+  </div>
+
+  <!-- Botón de cierre -->
+  <button
+
+    class="text-gray-500 hover:text-gray-600 focus:outline-none flex-shrink-0 ml-2"
+    (click)="closeAlert()"
+  >
+    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+    </svg>
+
+  </button>
+</div>
+}
+
+
+
+
+
